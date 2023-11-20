@@ -1,0 +1,90 @@
+Špecifikacia zadania
+
+Ulohy: 1. 2. 3.
+
+
+1. ABSTRACT
+2. ANALYZA PROBLEMU (uvod)
+3. PREHLAD POUZITYCH TECHNOLOGII
+3.X. MOBILNA APLIKACIA - porovnanie, DART, Flutter, Widget, Firebase, FB auth, FB firestore
+4. Existujuce riesenia
+
+5. NAVRH RIESENIA
+5.1 use case
+
+
+3. IMPLEMENTACIA, vyvseltim ten package jak sa co robi tam v com
+
+Úvod:
+
+Vďaka rapídnemu technologickému pokroku nám moderné technológie dennodenne uľahčujú život a dokážu zefektívniť procesy bežného dňa. Od komunikácie prostredníctvom národnej pošty, sme prešli cez SMS prosredníctvom mobilnej siete, spojením cez internet mailovými správami až po jednoduchú, efektívnu a hlavne rýchlu komunikáciu na sociálnych sieťach. Okrem efektívnej komunikácie je taktiež horúca téma dnešnej doby modernizácia systémov s ktorými sa stretávame na úradoch či v nemocniciach, ale aj v bežných zábavných alebo športových §niečo§. Cieľom modernizácie a automatizácie systémov je zariadiť to, aby sa klient menej zaoberal vybavovaním byrokracie či zaobstaraním danej služby, a začal viac si danú službu užívať.
+//Cieľom modernizácie a automatizácie systémov je zariadiť to, aby proces vybavovania danej služby  negatívne neovplyvnil zážitok z danej služby. Taktiež preto aby nenastala zbytočná chyba na strane zabezpečovateľa služby, ktorá by mohla negatívne poškodiť renomé spoločnosti.
+Drtivá vačšina ľudí momentlálne vlastní mobilný telefón s prístupom na internet. Mobilná aplikácia a systém zabezpečí to, že spracovanie údajov zabezpečí systém a nie osoba na druhej strane, čím zabránime chybe ľudským faktorom. Skrz mobilné aplikácie vieme zakúpiť ?zboží?, pracovať s našími údajmi či prihlásenie a rezervovanie určitej služby. Práve tejto modernizácií sme sa venovali v našej bakalárskej práci.
+
+
+Cieľom bolo zabezpečenie príjemnejšej skúsenosti športovej verejnosti s rezerváciou ihrísk pre plážové športy, zlepšenie spôsob komunikácie s daným klubom a zvýšenie kvality služieb zo strany klubu. Verejnosť si bude môcť rezervovať ihrisko, spravovať svoje rezervácie a komunikovať s klubom v prípade špeciálnych požiadaviek. Klub bude mať možnosť ?menežovať ine slovo ako spravovať? všetky rezervácie a vytvárať rezervácie pre potreby klubu. Okrem toho bude klub prostredníctvom aplikácie zdieľať najnovšie aktuality na ktoré bude môcť verejnosť reagovať.
+
+Využitie rezerváčného systému môže byť na prvý pohľad jednoducho nahradená spôsobom telefonátu manažérovi a požiadanie o rezerváciu, ale keďže klub neplánuje zamestnať niekoho na horúcu linku, rezervačným systémom sa zabráni to, že verejnosť sa nedovolá manažérovi a nebude môcť sa dostať na ihriská. Okrem toho bude aplikácia slúžiť ako oficiálny informačný a komunikačný kanál.
+
+Prácu sme rozdelili do štyroch častí. V prvej časti zanalyzujeme problem. Vysvetlíme zoznam použitých technológií a zároveň porovnáme už existujúce riešenia. Druhá časť bude obsahovať podrobnejší popis riešenia. Posledná časť bude obsahovať samotnú implementáciu systému.
+
+
+1 ANALYZA PROBLEMU
+
+Táto bakalárska práca je vytvorená pomocou technológií, ktoré su nad rámec štúdijného plánu odboru aplikovaná informatika, preto si v prvej časti kapitoly vysvetlíme technológie, ktoré sme využili na vytvorenie systému. V druhej časti si opíšeme existujúce systémy s rovnakou problematikou.
+
+Teoreticke sracky
+Natívny vývoj mobilnej aplikácie, Krížový vývoj mobilnej aplikácie - porovnanie, DART, Flutter, Widget, Firebase, Andriod Studo FB auth, FB firestore
+
+
+1.0
+Natívny vývoj
+Natívny vývoj je pojem pre vytváranie aplikácií pre špecifickú platformu (V prípade mobilných aplikácií platformy Android a iOS) prostredníctvom oficiálnych nástrojov a jazykov poskytnutým danou platformou.
+1.1 Výhody natívneho vývoju:
+	Aplikácia je plne optimalizovaná a vyrobená na mieru pre konkrétnu platformu, čo 	umožnuje plné využitie všetkých možností ktoré platforma ponúka.
+1.2 Nevýhody natívneho vývoju:
+	Samostnatný vývoj aplikácie pre platformy Android a iOS, môže viesť k zvýšeniu 	nákladov, predĺženiu celkového času vývoja a nákladnejšie náklady na individuálnu 	starostlivosť o nové verzie aplikácie.
+
+
+
+2.0
+Krížový (Cross-platform) vývoj.
+Krížový vývoj je pojem pre vytváranie aplikácií jedným kódom pre oba platformy.
+2.1 Výhody krížového vývoja:
+	Vývojom a následnou správou jedeného kódu pre viacero platforiem, zjednodušujeme 	údržbu a zabezpečujeme rýchlejší vývoj.
+2.2 Nevýhody krížového vývoja:
+	Obmedzenie prístupu k nativným funkciám danej platformy. Nie každá natívna 	funkcionalita natívnej aplikácie môže byť podporovaná pre krížový vývoj.
+
+
+
+2. DART
+https://dart.dev/
+/*https://www.bing.com/search?q=what+is+dart&qs=n&form=QBRE&sp=-1&ghc=1&lq=0&pq=what+is+dart&sc=11-12&sk=&cvid=1BDA3035FA06432C905DF1ECDE5721C9&ghsh=0&ghacc=0&ghpl=
+Dart is a general-purpose, high-level modern programming language which is originally developed by Google. It is the new programming language which is emerged in 2011, but its stable version was released in June 2017. Dart is not so popular at that time, but It gains popularity when it is used by the Flutter.
+Dart is a dynamic, class-based, object-oriented programming language with closure and lexical scope. Syntactically, it is quite similar to Java, C, and JavaScript. If you know any of these programming languages, you can easily learn the Dart programming language.
+Dart is an open-source programming language which is widely used to develop the mobile application, modern web-applications, desktop application, and the Internet of Things (IoT) using by Flutter framework. It also supports a few advance concepts such as interfaces, mixins, abstract classes, refield generics, and type interface. It is a compiled language and supports two types of compilation techniques.
+*/
+
+
+Dart je moderný, open-source, objektovo-orientovaný jazyk, ktorý sa syntaxou podobá na populárne jazyky C, Java či JavaScript. Okrem tried a objektov, má jazyk Dart špecifikácie ako napríklad statické typovanie, prácu s abstraktnými triedami a podporu asynchrónneho či funkcionálneho programovania.
+Jazyk Dart bol pôvodne vytvorený spoločnosťou Google a je navrhnutý pre vývoj moderných webových, desktopových a mobilných aplikácií. Dart ponúka možnosť pracovať s frameworkami, ako napríklad Flutter, Over React či AngularDart. V našej práci budeme používať framework Flutter.
+
+
+3.Flutter
+https://flutter.dev/
+Flutter is an open source framework by Google for building beautiful, natively compiled, multi-platform applications from a single codebase.
+
+
+4. Widget
+https://docs.flutter.dev/ui
+Flutter widgets are built using a modern framework that takes inspiration from React. The central idea is that you build your UI out of widgets. Widgets describe what their view should look like given their current configuration and state. When a widget’s state changes, the widget rebuilds its description, which the framework diffs against the previous description in order to determine the minimal changes needed in the underlying render tree to transition from one state to the next.
+
+5. Firebase
+
+
+
+
+
+
+
+
